@@ -1,0 +1,68 @@
+// ============================================================================
+// DimDate  (create via: Modeling > New table). Then: Mark as date table (column [Date]).
+// Also: select [Month] -> Column tools -> Sort by column -> [Month Number]
+// ============================================================================
+DimDate =
+ADDCOLUMNS(
+    CALENDAR(DATE(YEAR(MIN(Sales[Date])), 1, 1), DATE(YEAR(MAX(Sales[Date])), 12, 31)),
+    "Year", YEAR([Date]),
+    "Month Number", MONTH([Date]),
+    "Month", FORMAT([Date], "MMM"),
+    "Year-Month", FORMAT([Date], "YYYY-MM")
+)
+
+// ============================================================================
+// BASE MEASURES  (create all of them in a table called "_Measures")
+// ============================================================================
+Total Revenue   = SUM ( Sales[Sales] )
+Total Cost      = SUM ( Sales[Cost] )
+Total Profit    = SUM ( Sales[Profit] )
+Profit Margin % = DIVIDE ( [Total Profit], [Total Revenue] )
+Total Orders    = DISTINCTCOUNT ( Sales[Order_ID] )
+Total Quantity  = SUM ( Sales[Quantity] )
+Total Customers = DISTINCTCOUNT ( Sales[Customer_ID] )
+Avg Order Value = DIVIDE ( [Total Revenue], [Total Orders] )
+
+// ============================================================================
+// TIME INTELLIGENCE  (works inside charts that have DimDate on the axis/slicer)
+// ============================================================================
+Revenue Previous Month = CALCULATE ( [Total Revenue], DATEADD ( DimDate[Date], -1, MONTH ) )
+Revenue MoM %          = DIVIDE ( [Total Revenue] - [Revenue Previous Month], [Revenue Previous Month] )
+
+Revenue Previous Year  = CALCULATE ( [Total Revenue], SAMEPERIODLASTYEAR ( DimDate[Date] ) )
+Revenue YoY %          = DIVIDE ( [Total Revenue] - [Revenue Previous Year], [Revenue Previous Year] )
+
+Profit Previous Month  = CALCULATE ( [Total Profit], DATEADD ( DimDate[Date], -1, MONTH ) )
+Profit MoM %           = DIVIDE ( [Total Profit] - [Profit Previous Month], [Profit Previous Month] )
+
+// ============================================================================
+// HEADLINE "LATEST MONTH vs PREVIOUS MONTH" (for the KPI card; matches the Python engine)
+// REMOVEFILTERS(DimDate) makes the card ignore the date slicer; Region/Category slicers still apply.
+// ============================================================================
+Latest Month Start =
+VAR LastDate = CALCULATE ( MAX ( Sales[Date] ), REMOVEFILTERS ( DimDate ) )
+RETURN DATE ( YEAR ( LastDate ), MONTH ( LastDate ), 1 )
+
+Revenue Latest Month =
+CALCULATE ( [Total Revenue], REMOVEFILTERS ( DimDate ), DimDate[Date] >= [Latest Month Start] )
+
+Revenue Prior Month =
+CALCULATE (
+    [Total Revenue],
+    REMOVEFILTERS ( DimDate ),
+    DimDate[Date] >= EDATE ( [Latest Month Start], -1 ),
+    DimDate[Date] <  [Latest Month Start]
+)
+
+Revenue Growth % = DIVIDE ( [Revenue Latest Month] - [Revenue Prior Month], [Revenue Prior Month] )
+
+// ============================================================================
+// CONTRIBUTION & RANKING
+// ============================================================================
+Revenue Contribution % =
+DIVIDE ( [Total Revenue], CALCULATE ( [Total Revenue], ALLSELECTED () ) )
+
+Product Rank = RANKX ( ALLSELECTED ( DimProduct[Product] ), [Total Revenue], , DESC, DENSE )
+
+// Conditional-format helper (green/red growth arrows)
+Growth Arrow = IF ( [Revenue MoM %] >= 0, "▲", "▼" )

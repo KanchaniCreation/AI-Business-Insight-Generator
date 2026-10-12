@@ -1,0 +1,13 @@
+venv/
+.venv/
+.env
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.pytest_cache/
+.vscode/
+.DS_Store
+
+data/insights.db
+storage/
+data/realistic_business_sales_data_app_ready.csv

@@ -1,0 +1,566 @@
+{
+  "schema_version": "1.1",
+  "period": {
+    "current": "2026-09",
+    "previous": "2026-08",
+    "label": "September 2026",
+    "is_partial_month": false
+  },
+  "currency": "INR",
+  "kpis": {
+    "revenue": {
+      "current": 10395190.68,
+      "previous": 9738780.31,
+      "current_display": "₹1,03,95,191",
+      "previous_display": "₹97,38,780",
+      "growth_pct": 6.7
+    },
+    "profit": {
+      "current": 1982337.5,
+      "previous": 1857730.94,
+      "current_display": "₹19,82,338",
+      "previous_display": "₹18,57,731",
+      "growth_pct": 6.7
+    },
+    "average_order_value": {
+      "current": 23151.87,
+      "previous": 22860.99,
+      "current_display": "₹23,152",
+      "previous_display": "₹22,861",
+      "growth_pct": 1.3
+    },
+    "orders": {
+      "current": 449,
+      "previous": 426,
+      "growth_pct": 5.4
+    },
+    "customers": {
+      "current": 364,
+      "previous": 358,
+      "growth_pct": 1.7
+    },
+    "quantity": {
+      "current": 798,
+      "previous": 762,
+      "growth_pct": 4.7
+    },
+    "profit_margin_pct": {
+      "current": 19.1,
+      "previous": 19.1,
+      "change_pp": 0.0
+    },
+    "effective_discount_pct": {
+      "current": 5.4,
+      "previous": 6.0,
+      "change_pp": -0.6
+    }
+  },
+  "trend": {
+    "revenue": {
+      "direction": "increasing",
+      "slope_pct_per_month": 4.11,
+      "latest_mom_pct": 6.7,
+      "latest_yoy_pct": 37.8
+    },
+    "profit": {
+      "direction": "increasing",
+      "slope_pct_per_month": 3.58,
+      "latest_mom_pct": 6.7,
+      "latest_yoy_pct": 34.7
+    },
+    "orders": {
+      "direction": "increasing",
+      "slope_pct_per_month": 3.07,
+      "latest_mom_pct": 5.4,
+      "latest_yoy_pct": 17.5
+    }
+  },
+  "drivers": {
+    "Region": {
+      "net_revenue_change_display": "₹6,56,410",
+      "top_positive": [
+        {
+          "name": "North",
+          "growth_pct": 11.2,
+          "revenue_change": 481108.41,
+          "revenue_change_display": "₹4,81,108",
+          "share_of_net_change_pct": 73.3
+        },
+        {
+          "name": "South",
+          "growth_pct": 6.8,
+          "revenue_change": 180098.49,
+          "revenue_change_display": "₹1,80,098",
+          "share_of_net_change_pct": 27.4
+        },
+        {
+          "name": "East",
+          "growth_pct": 9.0,
+          "revenue_change": 128594.44,
+          "revenue_change_display": "₹1,28,594",
+          "share_of_net_change_pct": 19.6
+        }
+      ],
+      "top_negative": [
+        {
+          "name": "West",
+          "growth_pct": -9.8,
+          "revenue_change": -133390.97,
+          "revenue_change_display": "-₹1,33,391",
+          "share_of_net_change_pct": -20.3
+        }
+      ]
+    },
+    "Product_Category": {
+      "net_revenue_change_display": "₹6,56,410",
+      "top_positive": [
+        {
+          "name": "Electronics",
+          "growth_pct": 5.3,
+          "revenue_change": 449813.95,
+          "revenue_change_display": "₹4,49,814",
+          "share_of_net_change_pct": 68.5
+        },
+        {
+          "name": "Home Appliances",
+          "growth_pct": 21.7,
+          "revenue_change": 212932.19,
+          "revenue_change_display": "₹2,12,932",
+          "share_of_net_change_pct": 32.4
+        }
+      ],
+      "top_negative": [
+        {
+          "name": "Accessories",
+          "growth_pct": -2.6,
+          "revenue_change": -6335.77,
+          "revenue_change_display": "-₹6,336",
+          "share_of_net_change_pct": -1.0
+        }
+      ]
+    },
+    "Product": {
+      "net_revenue_change_display": "₹6,56,410",
+      "top_positive": [
+        {
+          "name": "Mobile",
+          "growth_pct": 11.6,
+          "revenue_change": 246811.49,
+          "revenue_change_display": "₹2,46,811",
+          "share_of_net_change_pct": 37.6
+        },
+        {
+          "name": "Laptop",
+          "growth_pct": 4.3,
+          "revenue_change": 229136.82,
+          "revenue_change_display": "₹2,29,137",
+          "share_of_net_change_pct": 34.9
+        },
+        {
+          "name": "Microwave",
+          "growth_pct": 28.6,
+          "revenue_change": 106861.99,
+          "revenue_change_display": "₹1,06,862",
+          "share_of_net_change_pct": 16.3
+        }
+      ],
+      "top_negative": [
+        {
+          "name": "Tablet",
+          "growth_pct": -4.7,
+          "revenue_change": -34839.43,
+          "revenue_change_display": "-₹34,839",
+          "share_of_net_change_pct": -5.3
+        }
+      ]
+    },
+    "Customer_Segment": {
+      "net_revenue_change_display": "₹6,56,410",
+      "top_positive": [
+        {
+          "name": "Corporate",
+          "growth_pct": 74.0,
+          "revenue_change": 1179658.0,
+          "revenue_change_display": "₹11,79,658",
+          "share_of_net_change_pct": 179.7
+        },
+        {
+          "name": "Consumer",
+          "growth_pct": 0.5,
+          "revenue_change": 31078.99,
+          "revenue_change_display": "₹31,079",
+          "share_of_net_change_pct": 4.7
+        }
+      ],
+      "top_negative": [
+        {
+          "name": "Small Business",
+          "growth_pct": -23.2,
+          "revenue_change": -513187.58,
+          "revenue_change_display": "-₹5,13,188",
+          "share_of_net_change_pct": -78.2
+        }
+      ]
+    },
+    "Sales_Channel": {
+      "net_revenue_change_display": "₹6,56,410",
+      "top_positive": [
+        {
+          "name": "Retail Store",
+          "growth_pct": 22.6,
+          "revenue_change": 427496.15,
+          "revenue_change_display": "₹4,27,496",
+          "share_of_net_change_pct": 65.1
+        },
+        {
+          "name": "Online",
+          "growth_pct": 2.9,
+          "revenue_change": 194055.45,
+          "revenue_change_display": "₹1,94,055",
+          "share_of_net_change_pct": 29.6
+        },
+        {
+          "name": "Distributor",
+          "growth_pct": 2.9,
+          "revenue_change": 34858.77,
+          "revenue_change_display": "₹34,859",
+          "share_of_net_change_pct": 5.3
+        }
+      ],
+      "top_negative": []
+    },
+    "Payment_Method": {
+      "net_revenue_change_display": "₹6,56,410",
+      "top_positive": [
+        {
+          "name": "UPI",
+          "growth_pct": 11.9,
+          "revenue_change": 637286.91,
+          "revenue_change_display": "₹6,37,287",
+          "share_of_net_change_pct": 97.1
+        },
+        {
+          "name": "Debit Card",
+          "growth_pct": 42.6,
+          "revenue_change": 184485.85,
+          "revenue_change_display": "₹1,84,486",
+          "share_of_net_change_pct": 28.1
+        }
+      ],
+      "top_negative": [
+        {
+          "name": "Credit Card",
+          "growth_pct": -3.4,
+          "revenue_change": -74882.68,
+          "revenue_change_display": "-₹74,883",
+          "share_of_net_change_pct": -11.4
+        },
+        {
+          "name": "Cash",
+          "growth_pct": -6.7,
+          "revenue_change": -53254.22,
+          "revenue_change_display": "-₹53,254",
+          "share_of_net_change_pct": -8.1
+        },
+        {
+          "name": "Net Banking",
+          "growth_pct": -3.8,
+          "revenue_change": -37225.49,
+          "revenue_change_display": "-₹37,225",
+          "share_of_net_change_pct": -5.7
+        }
+      ]
+    }
+  },
+  "forecast": {
+    "available": true,
+    "metric": "revenue",
+    "method": "seasonal_trend",
+    "last_actual_month": "2026-09",
+    "last_actual_display": "₹1,03,95,191",
+    "projections": [
+      {
+        "month": "2026-10",
+        "value_display": "₹1,20,89,174",
+        "lower_display": "₹1,13,84,904",
+        "upper_display": "₹1,27,93,445"
+      },
+      {
+        "month": "2026-11",
+        "value_display": "₹1,26,73,937",
+        "lower_display": "₹1,19,69,667",
+        "upper_display": "₹1,33,78,208"
+      },
+      {
+        "month": "2026-12",
+        "value_display": "₹1,16,26,319",
+        "lower_display": "₹1,09,22,049",
+        "upper_display": "₹1,23,30,590"
+      }
+    ],
+    "next_month_change_pct": 16.3,
+    "backtest_mape_pct": 4.8,
+    "note": "Statistical projection with a 95% range; not a guarantee."
+  },
+  "anomalies": {
+    "daily": [
+      {
+        "date": "2026-09-17",
+        "revenue_display": "₹10,26,023",
+        "typical_display": "₹3,15,526",
+        "direction": "spike",
+        "robust_z_score": 4.5
+      }
+    ],
+    "members": [
+      {
+        "dimension": "Customer_Segment",
+        "name": "Corporate",
+        "mom_pct": 73.9,
+        "typical_mom_pct": 4.4,
+        "z_score": 2.9,
+        "direction": "spike"
+      }
+    ]
+  },
+  "rule_based_insights": [
+    {
+      "type": "decline_risk",
+      "severity": "negative",
+      "dimension": "Region",
+      "name": "West",
+      "message": "West (Region) declined 9.8% (-₹1,33,391 change) and is flagged for investigation."
+    },
+    {
+      "type": "decline_risk",
+      "severity": "negative",
+      "dimension": "Product",
+      "name": "Tablet",
+      "message": "Tablet (Product) declined 4.7% (-₹34,839 change) and is flagged for investigation."
+    },
+    {
+      "type": "decline_risk",
+      "severity": "negative",
+      "dimension": "Customer_Segment",
+      "name": "Small Business",
+      "message": "Small Business (Customer Segment) declined 23.2% (-₹5,13,188 change) and is flagged for investigation."
+    },
+    {
+      "type": "decline_risk",
+      "severity": "negative",
+      "dimension": "Payment_Method",
+      "name": "Credit Card",
+      "message": "Credit Card (Payment Method) declined 3.4% (-₹74,883 change) and is flagged for investigation."
+    },
+    {
+      "type": "decline_risk",
+      "severity": "negative",
+      "dimension": "Payment_Method",
+      "name": "Cash",
+      "message": "Cash (Payment Method) declined 6.7% (-₹53,254 change) and is flagged for investigation."
+    },
+    {
+      "type": "decline_risk",
+      "severity": "negative",
+      "dimension": "Payment_Method",
+      "name": "Net Banking",
+      "message": "Net Banking (Payment Method) declined 3.8% (-₹37,225 change) and is flagged for investigation."
+    },
+    {
+      "type": "growth_concentration",
+      "severity": "warning",
+      "dimension": "Region",
+      "name": "North",
+      "message": "Growth is concentrated: North accounts for 73% of the net revenue change across Region."
+    },
+    {
+      "type": "growth_concentration",
+      "severity": "warning",
+      "dimension": "Product_Category",
+      "name": "Electronics",
+      "message": "Growth is concentrated: Electronics accounts for 69% of the net revenue change across Product Category."
+    },
+    {
+      "type": "unusual_movement",
+      "severity": "info",
+      "dimension": "Customer_Segment",
+      "name": "Corporate",
+      "message": "Corporate (Customer Segment) moved +73.9% this month versus a typical monthly change of +4.4%: statistically unusual (z-score 2.9)."
+    },
+    {
+      "type": "unusual_day",
+      "severity": "info",
+      "dimension": null,
+      "name": null,
+      "message": "Revenue on 2026-09-17 was ₹10,26,023 versus a typical ₹3,15,526 (spike, robust z-score 4.5)."
+    },
+    {
+      "type": "moderate_revenue_growth",
+      "severity": "positive",
+      "dimension": null,
+      "name": null,
+      "message": "Moderate revenue growth of 6.7% to ₹1,03,95,191."
+    },
+    {
+      "type": "growth_driver",
+      "severity": "positive",
+      "dimension": "Region",
+      "name": "North",
+      "message": "North (Region) is a growth driver: revenue +11.2% (+₹4,81,108)."
+    },
+    {
+      "type": "growth_driver",
+      "severity": "positive",
+      "dimension": "Region",
+      "name": "South",
+      "message": "South (Region) is a growth driver: revenue +6.8% (+₹1,80,098)."
+    },
+    {
+      "type": "growth_driver",
+      "severity": "positive",
+      "dimension": "Product_Category",
+      "name": "Electronics",
+      "message": "Electronics (Product Category) is a growth driver: revenue +5.3% (+₹4,49,814)."
+    },
+    {
+      "type": "growth_driver",
+      "severity": "positive",
+      "dimension": "Product_Category",
+      "name": "Home Appliances",
+      "message": "Home Appliances (Product Category) is a growth driver: revenue +21.7% (+₹2,12,932)."
+    },
+    {
+      "type": "growth_driver",
+      "severity": "positive",
+      "dimension": "Product",
+      "name": "Mobile",
+      "message": "Mobile (Product) is a growth driver: revenue +11.6% (+₹2,46,811)."
+    },
+    {
+      "type": "growth_driver",
+      "severity": "positive",
+      "dimension": "Product",
+      "name": "Laptop",
+      "message": "Laptop (Product) is a growth driver: revenue +4.3% (+₹2,29,137)."
+    },
+    {
+      "type": "growth_driver",
+      "severity": "positive",
+      "dimension": "Customer_Segment",
+      "name": "Corporate",
+      "message": "Corporate (Customer Segment) is a growth driver: revenue +74.0% (+₹11,79,658)."
+    },
+    {
+      "type": "growth_driver",
+      "severity": "positive",
+      "dimension": "Sales_Channel",
+      "name": "Retail Store",
+      "message": "Retail Store (Sales Channel) is a growth driver: revenue +22.6% (+₹4,27,496)."
+    },
+    {
+      "type": "growth_driver",
+      "severity": "positive",
+      "dimension": "Sales_Channel",
+      "name": "Online",
+      "message": "Online (Sales Channel) is a growth driver: revenue +2.9% (+₹1,94,055)."
+    },
+    {
+      "type": "growth_driver",
+      "severity": "positive",
+      "dimension": "Payment_Method",
+      "name": "UPI",
+      "message": "UPI (Payment Method) is a growth driver: revenue +11.9% (+₹6,37,287)."
+    },
+    {
+      "type": "growth_driver",
+      "severity": "positive",
+      "dimension": "Payment_Method",
+      "name": "Debit Card",
+      "message": "Debit Card (Payment Method) is a growth driver: revenue +42.6% (+₹1,84,486)."
+    },
+    {
+      "type": "forecast_growth",
+      "severity": "positive",
+      "dimension": null,
+      "name": null,
+      "message": "Projected revenue for 2026-10 is about ₹1,20,89,174 (95% range ₹1,13,84,904 to ₹1,27,93,445), +16.3% versus the last actual month; this is a statistical projection, not a guarantee."
+    }
+  ],
+  "allowed_names": [
+    "Accessories",
+    "Air Purifier",
+    "Cash",
+    "Charger",
+    "Consumer",
+    "Corporate",
+    "Credit Card",
+    "Debit Card",
+    "Distributor",
+    "East",
+    "Electronics",
+    "Headphones",
+    "Home Appliances",
+    "Keyboard",
+    "Laptop",
+    "Microwave",
+    "Mixer Grinder",
+    "Mobile",
+    "Mouse",
+    "Net Banking",
+    "North",
+    "Online",
+    "Retail Store",
+    "Small Business",
+    "South",
+    "Tablet",
+    "UPI",
+    "USB Cable",
+    "Unknown",
+    "West"
+  ],
+  "top_growth_region": {
+    "name": "North",
+    "growth_pct": 11.2
+  },
+  "top_growth_product": {
+    "name": "Mobile",
+    "growth_pct": 11.6
+  },
+  "negative_contributors": [
+    {
+      "dimension": "Region",
+      "name": "West",
+      "growth_pct": -9.8
+    },
+    {
+      "dimension": "Product_Category",
+      "name": "Accessories",
+      "growth_pct": -2.6
+    },
+    {
+      "dimension": "Product",
+      "name": "Tablet",
+      "growth_pct": -4.7
+    },
+    {
+      "dimension": "Customer_Segment",
+      "name": "Small Business",
+      "growth_pct": -23.2
+    },
+    {
+      "dimension": "Payment_Method",
+      "name": "Credit Card",
+      "growth_pct": -3.4
+    },
+    {
+      "dimension": "Payment_Method",
+      "name": "Cash",
+      "growth_pct": -6.7
+    },
+    {
+      "dimension": "Payment_Method",
+      "name": "Net Banking",
+      "growth_pct": -3.8
+    }
+  ]
+}
